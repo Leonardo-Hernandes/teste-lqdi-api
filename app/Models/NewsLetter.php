@@ -12,6 +12,8 @@ class NewsLetter extends Model
     protected $table = 'newsletter';
     protected $fillable = [
         'name',
-        'email'
+        'email',
+        'subject',
+        'message'
     ];
 }

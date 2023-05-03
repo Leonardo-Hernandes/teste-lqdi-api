@@ -18,7 +18,9 @@ class NewsLetterController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'min:3', 'max:15'],
-            'email' => ['required', 'email']
+            'email' => ['required', 'email'],
+            'subject' => ['required'],
+            'message' => ['required'],
         ]);
 
         try {
