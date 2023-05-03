@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsLetterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/newsLetters', [NewsLetterController::class, 'getAll']);
+Route::post('/register', [NewsLetterController::class, 'register']);
+Route::delete('/delete/{id?}', [NewsLetterController::class, 'delete']);
